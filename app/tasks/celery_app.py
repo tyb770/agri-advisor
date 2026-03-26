@@ -5,8 +5,8 @@ from celery.schedules import crontab
 
 celery_app = Celery(
     "agri_advisory",
-    broker="redis://localhost:6379/1",
-    backend="redis://localhost:6379/2",
+    broker=settings.REDIS_URL.replace("/0", "/1"),
+    backend=settings.REDIS_URL.replace("/0", "/2"),
     include=[
         "app.tasks.advisory_tasks",
         "app.tasks.satellite_tasks",
