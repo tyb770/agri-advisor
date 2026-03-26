@@ -1,0 +1,7 @@
+.env
+__pycache__
+terminal_guide.txt
+celerybeat-schedule
+celerybeat-schedule-shm
+celerybeat-schedule-wal
+create_admin.py
